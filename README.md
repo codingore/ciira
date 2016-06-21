@@ -1,2 +1,2 @@
 # ciira
-.NET port of Jira
+.NET clone of Jira
