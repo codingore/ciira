@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Something went wrong | Ciira";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    String message = "";
+    var error = HttpContext.Current.Session["exception"];
+    if (error != null) {
+        message = error.ToString();
+    }
+    String uri = Request.Url.AbsoluteUri.ToString();
+}
+
+	<script type="text/javascript">
+	    function yo_screen_changed() {
+	    }
+	    function yo_screen_changed_1280() {
+	    }
+	    function yo_screen_changed_960() {
+	    }
+	    function yo_screen_changed_854() {
+	    }
+	    function yo_screen_changed_800() {
+	    }
+	    function yo_screen_changed_720() {
+	    }
+	    function yo_screen_changed_640() {
+	    }
+	    function yo_screen_changed_600() {
+	    }
+	    function yo_screen_changed_540() {
+	    }
+	    function yo_screen_changed_480() {
+	    }
+	    function yo_screen_changed_360() {
+	    }
+	    function yo_screen_changed_320() {
+	    }
+	    function yo_screen_changed_240() {
+	    }
+	</script>		
+	<style>
+	
+	</style>
+
+<div class="yo-post">
+	<div class="yo-title"><a href="@Url.Action("Index", "Gate")">Something went wrong</a></div>
+	<div class="yo-body">
+        <p style="margin-top: 20px; white-space: pre-wrap; color: red;"><pre style="white-space: pre-wrap">@message</pre></p>
+	</div>
+</div>

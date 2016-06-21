@@ -1,0 +1,52 @@
+﻿@model Ciira.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login | Ciira";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+	<script type="text/javascript">
+	    function yo_screen_changed() {
+	    }
+	    function yo_screen_changed_1280() {
+	    }
+	    function yo_screen_changed_960() {
+	    }
+	    function yo_screen_changed_854() {
+	    }
+	    function yo_screen_changed_800() {
+	    }
+	    function yo_screen_changed_720() {
+	    }
+	    function yo_screen_changed_640() {
+	    }
+	    function yo_screen_changed_600() {
+	    }
+	    function yo_screen_changed_540() {
+	    }
+	    function yo_screen_changed_480() {
+	    }
+	    function yo_screen_changed_360() {
+	    }
+	    function yo_screen_changed_320() {
+	    }
+	    function yo_screen_changed_240() {
+	    }
+	</script>		
+	<style>
+	
+	</style>
+
+<div class="yo-post" style="max-width: 340px;">
+	<div class="yo-title"><a href="@Url.Action("Login", "Gate")">Login</a></div>
+	<div class="yo-body">
+@using (Html.BeginForm("Login", "Gate", FormMethod.Post, new { id = "LoginForm" }))
+{
+		<p>@Html.TextBoxFor(x => x.Email, new { @id = "emailE", @class = "form-control", placeholder = "Enter email" })</p>
+		<p>@Html.PasswordFor(x => x.Password, new { @id = "passwordE", @class = "form-control", placeholder = "Enter password" } )</p>
+        @Html.HiddenFor(x => x.ReturnUrl, new { @id="returnUrlE" })
+		<p class="text-center"><input id="loginE" type="submit" class="btn btn-success" value="Login" /></p>
+		<p class="text-warning text-center" id="messageE">@ViewBag.Message</p>
+}    
+	</div>
+</div>

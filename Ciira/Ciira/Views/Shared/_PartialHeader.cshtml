@@ -1,0 +1,40 @@
+﻿@{
+    Ciira.Models.User cu = new Ciira.Business.GateBusiness().CurrentUser();
+
+    bool online = false;
+    if (cu != null) {
+        online = true;
+    }
+}
+
+@if (online)
+{
+<div id="yo-logo" class='yo-logo'>
+	<a id="logoLinkE" href="@Url.Action("Index", "Gate")" title="Ciira">
+		<img id="logoE" src="@Url.Content("~/Images/icon.png")" />
+	</a>
+</div>
+
+<div id="yo-avatar" class='yo-logo'>
+	<a id="avatarLinkE" href='@Url.Action("Index", "Gate")' title='@cu.Name'>
+		<img id="avatarE" src='@cu.AvatarUrl' />
+	</a>
+</div>
+    
+<div class="yo-menu">
+	<a id="logoutMenuE" href="@Url.Action("Logout", "Gate")">Logout</a>
+</div>
+}
+else
+{
+<div id="yo-logo" class='yo-logo'>
+	<a id="logoLinkE" href="@Url.Action("Index", "Gate")" title="Ciira">
+		<img id="logoE" src="@Url.Content("~/Images/icon.png")" />
+	</a>
+</div>
+
+<div class="yo-menu">
+	<a id="loginMenuE" href="@Url.Action("Login", "Gate")">Login</a>
+</div>
+}
+

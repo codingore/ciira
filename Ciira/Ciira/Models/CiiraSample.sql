@@ -1,0 +1,1 @@
+﻿INSERT INTO [dbo].[User] ([Code], [Email], [Password], [Name], [AvatarUrl], [Kind]) VALUES (N'2c78813608ce4d7a80c82dc3e90dc98f', N'codingore@gmail.com', N'qbr4Zl4RToV7xZRGPqK8aA==', N'Tran Dinh Thoai', N'http://s10.postimg.org/m2vj2uetl/codingore.jpg', 4)

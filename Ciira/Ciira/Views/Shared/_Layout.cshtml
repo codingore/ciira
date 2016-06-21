@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>@ViewBag.Title</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="icon" href="@Url.Content("~/Images/favicon.png")" />
+
+@Html.Partial("~/Views/Shared/_PartialSEO.cshtml")	
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/responsive")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/common")
+    @Styles.Render("~/Content/bootstrap")
+    @RenderSection("scripts", required: false)
+</head>
+<body id="yo-screen">
+	<div class="yo-page">
+
+@Html.Partial("~/Views/Shared/_PartialHeader.cshtml")	
+
+@RenderBody()
+
+@Html.Partial("~/Views/Shared/_PartialFooter.cshtml")	
+	
+	</div>
+</body>
+</html>
